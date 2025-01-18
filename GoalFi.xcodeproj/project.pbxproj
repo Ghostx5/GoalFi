@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B176E69B2D3B6C5A00BC2C21 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B176E69A2D3B6C5A00BC2C21 /* FirebaseAuth */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B10413492D3896CB0006C517 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B176E69B2D3B6C5A00BC2C21 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +130,7 @@
 			);
 			name = GoalFi;
 			packageProductDependencies = (
+				B176E69A2D3B6C5A00BC2C21 /* FirebaseAuth */,
 			);
 			productName = GoalFi;
 			productReference = B10413322D3896C50006C517 /* GoalFi.app */;
@@ -208,6 +214,9 @@
 			);
 			mainGroup = B10413292D3896C50006C517;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B176E6992D3B6C5A00BC2C21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B10413332D3896C50006C517 /* Products */;
 			projectDirPath = "";
@@ -573,6 +582,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B176E6992D3B6C5A00BC2C21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B176E69A2D3B6C5A00BC2C21 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B176E6992D3B6C5A00BC2C21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B104132A2D3896C50006C517 /* Project object */;
 }
