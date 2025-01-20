@@ -106,6 +106,36 @@
                                     <segue destination="Kb0-ip-Vxr" kind="show" id="yZE-hF-vUc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrN-s0-JXm">
+                                <rect key="frame" x="244" y="786" width="133" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1177790239" green="0.3220151067" blue="0.2309340537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Name Test" cornerStyle="medium">
+                                    <fontDescription key="titleFontDescription" name="Gotham-Bold" family="Gotham" pointSize="18"/>
+                                    <color key="baseForegroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="caD-m4-hxM" kind="show" id="DwE-mf-xhU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dy2-qg-RdB">
+                                <rect key="frame" x="102" y="782" width="133" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1177790239" green="0.3220151067" blue="0.2309340537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Log Out" cornerStyle="medium">
+                                    <fontDescription key="titleFontDescription" name="Gotham-Bold" family="Gotham" pointSize="18"/>
+                                    <color key="baseForegroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logOutClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZn-QP-A1S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.1177790239" green="0.3220151067" blue="0.2309340537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -114,10 +144,14 @@
                         <color key="badgeColor" red="0.19940671478867641" green="0.53993790729499835" blue="0.38916743135630094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="wDh-b2-9g8"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="fL8-MS-atN" id="XY1-bF-SG2"/>
+                        <segue destination="lqf-he-omA" kind="presentation" identifier="loggedOut" modalPresentationStyle="fullScreen" id="YUe-nd-rax"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55.725190839694655" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="197.70992366412213" y="-85.211267605633807"/>
         </scene>
         <!--Announcements-->
         <scene sceneID="q4o-9E-n3g">
@@ -150,7 +184,7 @@
         <!--Login Page-->
         <scene sceneID="2Wy-DZ-gYd">
             <objects>
-                <viewController title="Login Page" id="uRH-eO-lFD" customClass="ViewController" customModule="GoalFi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login Page" id="uRH-eO-lFD" customClass="InitPageViewController" customModule="GoalFi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xgM-EL-qYc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,6 +252,9 @@
                         <color key="badgeColor" red="0.1994067148" green="0.53993790730000002" blue="0.38916743139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="zZe-MD-Etb"/>
+                    <connections>
+                        <segue destination="QsB-cd-3BX" kind="presentation" identifier="dontPassGo" modalPresentationStyle="fullScreen" id="GHa-sg-oUf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6s-y8-Ikk" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,7 +265,7 @@
             <objects>
                 <navigationController id="lqf-he-omA" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ue1-oD-23s">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -392,16 +429,118 @@
                     <connections>
                         <outlet property="emailTextField" destination="buf-Ew-fnr" id="yx0-aD-5WW"/>
                         <outlet property="passwordTextField" destination="gH3-0j-McR" id="aow-rP-BrM"/>
-                        <segue destination="QsB-cd-3BX" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" id="TVE-5G-naz"/>
+                        <segue destination="QsB-cd-3BX" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" id="t1q-95-LG0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQG-O9-37A" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3208.3969465648852" y="95.774647887323951"/>
         </scene>
+        <!--Name Test-->
+        <scene sceneID="lsI-dS-qbY">
+            <objects>
+                <viewController title="Name Test" id="caD-m4-hxM" customClass="NameTestViewController" customModule="GoalFi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vks-gO-q8Y">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD8-r3-mgS">
+                                <rect key="frame" x="16" y="219" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Name Below." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uU4-fL-qm4">
+                                <rect key="frame" x="106" y="148" width="181" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcj-nC-a3V">
+                                <rect key="frame" x="72" y="282" width="249" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1994067148" green="0.53993790730000002" blue="0.38916743139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WeH-sv-DdJ">
+                                <rect key="frame" x="72" y="227" width="249" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1994067148" green="0.53993790730000002" blue="0.38916743139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efA-xX-KQM">
+                                <rect key="frame" x="43" y="393" width="120" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1177790239" green="0.3220151067" blue="0.2309340537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Retrieve" cornerStyle="medium">
+                                    <fontDescription key="titleFontDescription" name="Gotham-Bold" family="Gotham" pointSize="18"/>
+                                    <color key="baseForegroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="retrieveButtonClicked:" destination="caD-m4-hxM" eventType="touchUpInside" id="FZD-Ki-SLn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Storage Test!!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36z-II-qgw">
+                                <rect key="frame" x="43" y="91" width="307" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="39"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="null" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymU-rb-5YK">
+                                <rect key="frame" x="43" y="310" width="307" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="39"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cl-IJ-eUX">
+                                <rect key="frame" x="200" y="393" width="139" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1177790239" green="0.3220151067" blue="0.2309340537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="store" cornerStyle="medium">
+                                    <fontDescription key="titleFontDescription" name="Gotham-Bold" family="Gotham" pointSize="18"/>
+                                    <color key="baseForegroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="storeButtonClicked:" destination="caD-m4-hxM" eventType="touchUpInside" id="PTx-wS-zmF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h2t-rB-R7x"/>
+                        <color key="backgroundColor" red="0.1177790239" green="0.3220151067" blue="0.2309340537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="gr2-J7-2z5">
+                        <color key="badgeColor" red="0.1994067148" green="0.53993790730000002" blue="0.38916743139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="BpK-EM-Ilz"/>
+                    <connections>
+                        <outlet property="mailTextField" destination="WeH-sv-DdJ" id="KYe-gd-e5N"/>
+                        <outlet property="nameTextField" destination="gcj-nC-a3V" id="I7P-Et-fOU"/>
+                        <outlet property="retrievalTextField" destination="ymU-rb-5YK" id="IPc-pu-vvr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IE3-M4-ih2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70.992366412213741" y="657.04225352112678"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TVE-5G-naz"/>
+        <segue reference="GHa-sg-oUf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AspireLogo" width="1024" height="1024"/>
