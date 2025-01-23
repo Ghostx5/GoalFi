@@ -36,6 +36,8 @@
 		B10413322D3896C50006C517 /* GoalFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10413482D3896CB0006C517 /* GoalFiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoalFiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10413522D3896CB0006C517 /* GoalFiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoalFiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B12B20252D41DEF40036BE18 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
+		B193DD352D41E006006A229D /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -106,6 +108,7 @@
 				B10413342D3896C50006C517 /* GoalFi */,
 				B104134B2D3896CB0006C517 /* GoalFiTests */,
 				B10413552D3896CB0006C517 /* GoalFiUITests */,
+				B12B202E2D41DF060036BE18 /* Frameworks */,
 				B10413332D3896C50006C517 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +119,27 @@
 				B10413322D3896C50006C517 /* GoalFi.app */,
 				B10413482D3896CB0006C517 /* GoalFiTests.xctest */,
 				B10413522D3896CB0006C517 /* GoalFiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B12B20262D41DEF40036BE18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B12B202E2D41DF060036BE18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B193DD422D41E006006A229D /* Products */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,6 +259,16 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B10413332D3896C50006C517 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B193DD422D41E006006A229D /* Products */;
+					ProjectRef = B193DD352D41E006006A229D /* Charts.xcodeproj */;
+				},
+				{
+					ProductGroup = B12B20262D41DEF40036BE18 /* Products */;
+					ProjectRef = B12B20252D41DEF40036BE18 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B10413312D3896C50006C517 /* GoalFi */,
@@ -317,11 +351,13 @@
 				DEVELOPMENT_TEAM = W94MVSLFT7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoalFi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GoalFi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -347,11 +383,13 @@
 				DEVELOPMENT_TEAM = W94MVSLFT7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoalFi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GoalFi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

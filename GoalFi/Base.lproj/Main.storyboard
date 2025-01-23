@@ -136,6 +136,21 @@
                                     <action selector="logOutClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZn-QP-A1S"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3X-nk-dNe">
+                                <rect key="frame" x="16" y="510" width="165" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1177790239" green="0.3220151067" blue="0.2309340537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Finances" cornerStyle="medium">
+                                    <fontDescription key="titleFontDescription" name="Gotham-Bold" family="Gotham" pointSize="25"/>
+                                    <color key="baseForegroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="zz0-o9-g81" kind="show" id="6FC-wh-gh7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.1177790239" green="0.3220151067" blue="0.2309340537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -537,6 +552,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IE3-M4-ih2" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="70.992366412213741" y="657.04225352112678"/>
+        </scene>
+        <!--Chart-->
+        <scene sceneID="AJ1-c6-JUE">
+            <objects>
+                <viewController title="Chart" id="zz0-o9-g81" customClass="FinanceViewController" customModule="GoalFi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9tC-iR-YcC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finance" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovc-nY-OY3">
+                                <rect key="frame" x="131" y="65" width="131" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lw8-tU-xSM"/>
+                        <color key="backgroundColor" red="0.1177790239" green="0.3220151067" blue="0.2309340537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Announcements" image="speaker.wave.2.fill" catalog="system" id="leb-7h-gab">
+                        <color key="badgeColor" red="0.1994067148" green="0.53993790730000002" blue="0.38916743139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="bBH-lj-3tI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6x-Fk-LXz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1211" y="703"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
