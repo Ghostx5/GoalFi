@@ -3,10 +3,8 @@
 
 # Ignore Gradle build output directory
 build
+local.properties
 
 # Ignore Mac OS files
 .DS_Store
-
-# Ignore git files
-.gitignore
-.gitattributes
+.idea
