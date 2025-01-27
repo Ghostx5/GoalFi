@@ -27,9 +27,22 @@ class LoginViewController: UIViewController {
                 print("Error")
             }
             else {
+                let emailStripped = email
+                    .replacingOccurrences(of: "@", with: "")
+                    .replacingOccurrences(of: ".", with: "")
+                guard let userID = UserDefaults.standard.object(forKey: "uniqueDeviceID") else{return}
+                let userDefaultsKey = "uniqueDeviceID"
+                UserDefaults.standard.set(emailStripped, forKey: userDefaultsKey)
+                print("Success! User ID is: " + emailStripped )
+
                 self.performSegue(withIdentifier: "goToHome", sender: self)
+                    
             }
+            
         }
+
+        
+        
     }
     
 

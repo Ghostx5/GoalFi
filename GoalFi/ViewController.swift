@@ -16,11 +16,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        DeviceIDManager.shared.getOrCreateUniqueDeviceID { uniqueDeviceID in
-            print("Device ID: \(uniqueDeviceID)")
-        }
-        let IDstring = "\(userID)"
-        databaseRef.child("users").child(IDstring).child("name").observeSingleEvent(of: .value) {snapshot in
+        let IDstring = userID
+        databaseRef.child("users").child(IDstring as! String).child("name").observeSingleEvent(of: .value) {snapshot in
             if let name = snapshot.value as? String{
                 self.welcomeLabel.text = "Welcome, \(name)!"
             }

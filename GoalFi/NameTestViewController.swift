@@ -23,14 +23,14 @@ class NameTestViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func storeButtonClicked(_ sender: UIButton) {
-        let IDstring = "\(userID)"
+        let IDstring = userID
         guard let name = nameTextField.text else {return}
-        databaseRef.child("users").child(IDstring).child("name").setValue(name)
+        databaseRef.child("users").child(IDstring as! String).child("name").setValue(name)
         
     }
     @IBAction func retrieveButtonClicked(_ sender: UIButton) {
-        let IDstring = "\(userID)"
-        databaseRef.child("users").child(IDstring).child("name").observeSingleEvent(of: .value) {snapshot in
+        let IDstring = userID
+        databaseRef.child("users").child(IDstring as! String).child("name").observeSingleEvent(of: .value) {snapshot in
             if let name = snapshot.value as? String{
                 self.retrievalTextField.text = name
             }
