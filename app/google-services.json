@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "381726817367",
+    "firebase_url": "https://goalfi-2437b-default-rtdb.firebaseio.com",
+    "project_id": "goalfi-2437b",
+    "storage_bucket": "goalfi-2437b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381726817367:android:cb6eb71c3896a7a8aeb712",
+        "android_client_info": {
+          "package_name": "com.aspirefinance.goalfi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_7LTyzgFHG0PsC5xtXxdU5ftxEhJzOt4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
