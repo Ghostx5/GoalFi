@@ -36,6 +36,7 @@
 		B10413322D3896C50006C517 /* GoalFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10413482D3896CB0006C517 /* GoalFiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoalFiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10413522D3896CB0006C517 /* GoalFiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoalFiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B12717F52D491D0700AB8693 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
 		B12B20252D41DEF40036BE18 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
 		B14B11EC2D45803900689255 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
 		B193DD352D41E006006A229D /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
@@ -120,6 +121,13 @@
 				B10413322D3896C50006C517 /* GoalFi.app */,
 				B10413482D3896CB0006C517 /* GoalFiTests.xctest */,
 				B10413522D3896CB0006C517 /* GoalFiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B12718032D491D0700AB8693 /* Products */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,6 +287,10 @@
 				{
 					ProductGroup = B14B11FA2D45803900689255 /* Products */;
 					ProjectRef = B14B11EC2D45803900689255 /* Charts.xcodeproj */;
+				},
+				{
+					ProductGroup = B12718032D491D0700AB8693 /* Products */;
+					ProjectRef = B12717F52D491D0700AB8693 /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";

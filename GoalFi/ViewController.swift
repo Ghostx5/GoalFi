@@ -32,7 +32,10 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func logOutClicked(_ sender: UIButton) {
+    @IBAction func settingsClicked(_ sender: UITapGestureRecognizer) {
+        self.performSegue(withIdentifier: "settingsSegue", sender: self)
+    }
+    @IBAction func signOutClicked(_ sender: UITapGestureRecognizer) {
         do {
             try Auth.auth().signOut()
             print("Signed out!")
@@ -45,3 +48,4 @@ class ViewController: UIViewController {
         }
     }
 }
+

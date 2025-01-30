@@ -5,6 +5,7 @@
 //  Created by Vijay Venkatesan on 1/19/25.
 //
 
+// This file/class is considered DEPRECATED. Replaced by emails to access remote database.
 import Foundation
 import FirebaseDatabase
 
