@@ -1,8 +1,11 @@
 package com.aspirefinance.goalfi
 
+import android.content.Intent
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.aspirefinance.goalfi.pages.StartPage
 import com.google.firebase.auth.FirebaseAuth
 
 

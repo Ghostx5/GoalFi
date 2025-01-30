@@ -29,8 +29,8 @@ class login : AppCompatActivity() {
             authViewModel.authState.observe(this) {state ->
                 when(state) {
                     is AuthState.Authenticated -> {
-                        Toast.makeText(this, "Signup successful!", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this, StartPage::class.java)
+                        Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this, Home::class.java)  // Ensure the correct class name
                         startActivity(intent)
                         finish()
                     }
