@@ -14,7 +14,7 @@
         android:theme="@style/Theme.GoalFi"
         tools:targetApi="31">
         <activity
-            android:name=".pages.HomePage"
+            android:name=".pages.StartPage"
             android:exported="false" />
         <activity
             android:name=".pages.login"

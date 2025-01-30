@@ -2,6 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="green">#19422d</color>
+    <color name="transparentWhite">#80FFFFFF</color>  <!-- Fully opaque white -->
+    <color name="green">#1E523B</color>
     <color name="btn">#30FFFFFF</color>
+    <color name="lightgreen">#62AC74</color>
 </resources>
