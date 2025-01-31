@@ -45,6 +45,7 @@
 		B14B11EC2D45803900689255 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
 		B152D1782D4D3989005AADB6 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
 		B193DD352D41E006006A229D /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
+		B1A6B0742D4D925B00E2090C /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -194,6 +195,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B1A6B0842D4D925B00E2090C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,10 +321,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B1235DD82D4D4A1100EF4193 /* Products */;
-					ProjectRef = B1235DC82D4D4A1100EF4193 /* Charts.xcodeproj */;
-				},
-				{
 					ProductGroup = B193DD422D41E006006A229D /* Products */;
 					ProjectRef = B193DD352D41E006006A229D /* Charts.xcodeproj */;
 				},
@@ -329,6 +333,14 @@
 					ProjectRef = B14B11EC2D45803900689255 /* Charts.xcodeproj */;
 				},
 				{
+					ProductGroup = B12718032D491D0700AB8693 /* Products */;
+					ProjectRef = B12717F52D491D0700AB8693 /* Charts.xcodeproj */;
+				},
+				{
+					ProductGroup = B1235DD82D4D4A1100EF4193 /* Products */;
+					ProjectRef = B1235DC82D4D4A1100EF4193 /* Charts.xcodeproj */;
+				},
+				{
 					ProductGroup = B152D1872D4D3989005AADB6 /* Products */;
 					ProjectRef = B152D1782D4D3989005AADB6 /* Charts.xcodeproj */;
 				},
@@ -337,12 +349,12 @@
 					ProjectRef = B1235D892D4D48FD00EF4193 /* Charts.xcodeproj */;
 				},
 				{
-					ProductGroup = B12DA33C2D4C28BD000849DE /* Products */;
-					ProjectRef = B12DA32D2D4C28BD000849DE /* Charts.xcodeproj */;
+					ProductGroup = B1A6B0842D4D925B00E2090C /* Products */;
+					ProjectRef = B1A6B0742D4D925B00E2090C /* Charts.xcodeproj */;
 				},
 				{
-					ProductGroup = B12718032D491D0700AB8693 /* Products */;
-					ProjectRef = B12717F52D491D0700AB8693 /* Charts.xcodeproj */;
+					ProductGroup = B12DA33C2D4C28BD000849DE /* Products */;
+					ProjectRef = B12DA32D2D4C28BD000849DE /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
