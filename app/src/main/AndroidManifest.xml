@@ -19,7 +19,11 @@
         <activity
             android:name=".pages.login"
             android:exported="false"
-            android:label="Log In" /> <!-- Main Activity (Launcher) -->
+            android:label="Log In" />
+        <activity
+            android:name=".pages.homePage"
+            android:exported="false"
+            android:label="Home Page"/><!-- Main Activity (Launcher) -->
         <activity
             android:name=".MainActivity"
             android:exported="true"

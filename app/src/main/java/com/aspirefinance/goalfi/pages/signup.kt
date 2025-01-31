@@ -10,6 +10,7 @@ import com.aspirefinance.goalfi.AuthState
 import com.aspirefinance.goalfi.AuthViewModel
 import com.aspirefinance.goalfi.R
 import androidx.activity.viewModels
+import com.aspirefinance.goalfi.MainActivity
 
 class sign_up : AppCompatActivity() {
     private val authViewModel: AuthViewModel by viewModels()// ✅ Correct ViewModel initialization
@@ -23,11 +24,16 @@ class sign_up : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)  // Set the layout for the sign-up activity
 
+        super.onResume()
+        if (intent.getBooleanExtra("EXIT", false)) {
+            finish()
+        }
 
-        val submit = findViewById<Button>(R.id.signupSubmit)
+
+        val submitSignUp = findViewById<Button>(R.id.signupSubmit)
 
 
-        submit.setOnClickListener {
+        submitSignUp.setOnClickListener {
             val email = findViewById<EditText>(R.id.userEmail)
             val password = findViewById<EditText>(R.id.userPassword)
             authViewModel.signup(email.getText().toString().trim(), password.getText().toString().trim())
@@ -35,7 +41,8 @@ class sign_up : AppCompatActivity() {
                 when(state) {
                     is AuthState.Authenticated -> {
                         Toast.makeText(this, "Signup successful!", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this, StartPage::class.java)
+                        val intent = Intent(this, homePage::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         startActivity(intent)
                         finish()
                     }

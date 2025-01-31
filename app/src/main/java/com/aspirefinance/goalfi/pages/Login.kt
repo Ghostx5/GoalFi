@@ -18,11 +18,16 @@ class login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)  // Set the layout for the sign-up activity
 
+        super.onResume()
+        if (intent.getBooleanExtra("EXIT", false)) {
+            finish()
+        }
 
-        val submit = findViewById<Button>(R.id.loginSubmit)
+
+        val submitLogin = findViewById<Button>(R.id.loginSubmit)
 
 
-        submit.setOnClickListener {
+        submitLogin.setOnClickListener {
             val email = findViewById<EditText>(R.id.emailField)
             val password = findViewById<EditText>(R.id.passwordField)
             authViewModel.login(email.getText().toString().trim(), password.getText().toString().trim())
@@ -30,7 +35,8 @@ class login : AppCompatActivity() {
                 when(state) {
                     is AuthState.Authenticated -> {
                         Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this, Home::class.java)  // Ensure the correct class name
+                        val intent = Intent(this, homePage::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         startActivity(intent)
                         finish()
                     }
