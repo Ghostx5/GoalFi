@@ -14,11 +14,11 @@
         android:id="@+id/budget"
         android:icon="@drawable/pie_chart_24dp_e8eaed_fill0_wght400_grad0_opsz24"/>
     <item
-        android:title="Chatbot"
-        android:id="@+id/chatbot"
-        android:icon="@drawable/chat_24dp_e8eaed_fill0_wght400_grad0_opsz24"/>
-    <item
         android:title="Learn"
         android:id="@+id/learn"
         android:icon="@drawable/school_24dp_e8eaed_fill0_wght400_grad0_opsz24"/>
+    <item
+        android:title="Settings"
+        android:id="@+id/settings"
+        android:icon="@drawable/settings_24dp_e8eaed_fill0_wght400_grad0_opsz24"/>
 </menu>
