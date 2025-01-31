@@ -28,6 +28,8 @@ class EditFinanceViewController: UIViewController {
         let IDstring = userID
         databaseRef.child("users").child(IDstring as! String).child("Finance").child("Monthly Salary").setValue(financeValue)
         databaseRef.child("users").child(IDstring as! String).child("Finance").child("Zip Code").setValue(zipCode)
+        NotificationCenter.default.post(name: NSNotification.Name("RefreshClicked"), object: "Refresh Button Clicked!")
+        dismiss(animated: true, completion: nil)
 
         
     }

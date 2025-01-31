@@ -10,11 +10,10 @@ import UIKit
 import SwiftUI
 import Charts
 import FirebaseDatabase
-func updateValues(_ notification: Notification){
-    
-}
+
 
 class FinanceViewController: UIViewController {
+    @IBOutlet weak var settingsButton: UIImageView!
     let databaseRef = Database.database().reference()
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var SavingsTextLabel: UILabel!
@@ -24,8 +23,9 @@ class FinanceViewController: UIViewController {
     let userID = UserDefaults.standard.object(forKey: "uniqueDeviceID")
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       let IDstring = userID
+        NotificationCenter.default.addObserver(self, selector: #selector(updateValues(_:)), name: NSNotification.Name("RefreshClicked"), object:nil)
+        
+        let IDstring = userID
         databaseRef.child("users").child(IDstring as! String).child("Finance").child("Monthly Salary").observeSingleEvent(of: .value) {snapshot,placehold in if let money = snapshot.value as? String{
             self.summaryLabel.text = "You make: $" + money
             let funny = Double(money)
@@ -40,30 +40,54 @@ class FinanceViewController: UIViewController {
                 print("Money not found")
             }
         }
-            let pieChartView = PieChartView()
-            // Embed it in a UIHostingController
-            let hostingController = UIHostingController(rootView: pieChartView)
-            hostingController.view.backgroundColor = .clear
+        let pieChartView = PieChartView()
+        // Embed it in a UIHostingController
+        let hostingController = UIHostingController(rootView: pieChartView)
+        hostingController.view.backgroundColor = .clear
+        
+        // Add the hosting controller as a child view controller
+        self.addChild(hostingController)
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(hostingController.view)
+        
+        // Set up constraints for the SwiftUI view
+        NSLayoutConstraint.activate([
+            hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            hostingController.view.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            hostingController.view.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8), // 80% of the screen width
+            hostingController.view.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5) // 50% of the screen height
+        ])
+        
+        hostingController.didMove(toParent: self)
+    }
+    @objc func updateValues(_ notification: Notification){
+        let IDstring = userID
+        self.view.makeToast("Finances Updated!", duration: 3.0, position: .top)
+        databaseRef.child("users").child(IDstring as! String).child("Finance").child("Monthly Salary").observeSingleEvent(of: .value) {snapshot,placehold in if let money = snapshot.value as? String{
+            self.summaryLabel.text = "You make: $" + money
+            let funny = Double(money)
+            let needs = String((funny ?? 1000) * 0.50)
+            let savings = String((funny ?? 1000) * 0.30)
+            let wants = String((funny ?? 1000) * 0.20)
+            self.NeedsTextLabel.text = "$"+needs+" on needs."
+            self.WantsTextLabels.text = "$"+wants+" on wants."
+            self.SavingsTextLabel.text = "$"+savings+" to your savings."
+        }
+            else{
+                print("Money not found")
+            }
             
-            // Add the hosting controller as a child view controller
-            self.addChild(hostingController)
-            hostingController.view.translatesAutoresizingMaskIntoConstraints = false
-            self.view.addSubview(hostingController.view)
-            
-            // Set up constraints for the SwiftUI view
-            NSLayoutConstraint.activate([
-                hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-                hostingController.view.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-                hostingController.view.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8), // 80% of the screen width
-                hostingController.view.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5) // 50% of the screen height
-            ])
-            
-            hostingController.didMove(toParent: self)
         }
         // Do any additional setup after loading the view.
         
     }
-    
+// Not in use at the moment.
+    @IBAction func imageTapped(_ sender:UITapGestureRecognizer){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let nextVC = storyboard.instantiateViewController(withIdentifier: "EditFinanceView") as? EditFinanceViewController{
+            navigationController?.pushViewController(nextVC, animated: true)
+        }
+    }
     struct PieChartView: View {
         struct PieData: Identifiable {
             let id = UUID()
@@ -101,4 +125,4 @@ class FinanceViewController: UIViewController {
             .background(Color.clear)
         }
     }
-
+}

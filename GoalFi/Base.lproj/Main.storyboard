@@ -17,7 +17,7 @@
             <objects>
                 <viewController id="k9B-tc-LOv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nNp-Du-ov8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GoalFi Resources" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyj-QJ-A0D">
@@ -132,6 +132,9 @@
                                     <color key="baseForegroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="baseBackgroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logOutClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="emA-sf-Aqy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3X-nk-dNe">
                                 <rect key="frame" x="16" y="510" width="165" height="164"/>
@@ -203,7 +206,7 @@
             <objects>
                 <viewController id="Kb0-ip-Vxr" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ulv-em-5kN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Announcements" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUH-P4-Bvj">
@@ -486,7 +489,7 @@
             <objects>
                 <viewController title="Name Test" id="caD-m4-hxM" customClass="NameTestViewController" customModule="GoalFi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vks-gO-q8Y">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD8-r3-mgS">
@@ -577,6 +580,7 @@
                         <outlet property="mailTextField" destination="WeH-sv-DdJ" id="KYe-gd-e5N"/>
                         <outlet property="nameTextField" destination="gcj-nC-a3V" id="I7P-Et-fOU"/>
                         <outlet property="retrievalTextField" destination="ymU-rb-5YK" id="IPc-pu-vvr"/>
+                        <segue destination="QsB-cd-3BX" kind="presentation" identifier="nametohome" modalPresentationStyle="fullScreen" id="F9a-fa-pLZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IE3-M4-ih2" sceneMemberID="firstResponder"/>
@@ -633,18 +637,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="gearshape.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LVo-zN-xIv">
-                                <rect key="frame" x="300" y="62.333333333333371" width="77" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AF-Gh-6V8">
                                 <rect key="frame" x="115" y="752" width="162" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1177790239" green="0.3220151067" blue="0.2309340537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <color key="tintColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Finance Debug" cornerStyle="medium">
+                                <buttonConfiguration key="configuration" style="tinted" title="Edit Finances" cornerStyle="medium">
                                     <fontDescription key="titleFontDescription" name="Gotham-Bold" family="Gotham" pointSize="18"/>
                                     <color key="baseForegroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="baseBackgroundColor" red="0.26008408519999998" green="0.7042353455" blue="0.50758699610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -658,6 +658,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lw8-tU-xSM"/>
                         <color key="backgroundColor" red="0.1177790239" green="0.3220151067" blue="0.2309340537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Announcements" image="speaker.wave.2.fill" catalog="system" id="leb-7h-gab">
                         <color key="badgeColor" red="0.1994067148" green="0.53993790730000002" blue="0.38916743139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -671,13 +672,19 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6x-Fk-LXz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer delaysTouchesEnded="NO" id="Mxs-t1-qDc">
+                    <eventButtonMask key="buttonMaskRequired" primary="YES" secondary="YES"/>
+                    <connections>
+                        <segue destination="isF-vf-k08" kind="show" id="xgZ-Zt-Pcu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1209.9236641221373" y="702.11267605633805"/>
         </scene>
         <!--FinanceDebug-->
         <scene sceneID="gV3-aR-jKD">
             <objects>
-                <viewController title="FinanceDebug" id="isF-vf-k08" customClass="EditFinanceViewController" customModule="GoalFi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditFinanceView" title="FinanceDebug" id="isF-vf-k08" customClass="EditFinanceViewController" customModule="GoalFi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3K9-Jw-usc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -767,7 +774,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xdf-Oa-NBC"/>
+        <segue reference="Pja-BT-XoN"/>
+        <segue reference="XJ9-Nh-ECM"/>
+        <segue reference="F9a-fa-pLZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AspireLogo" width="1024" height="1024"/>

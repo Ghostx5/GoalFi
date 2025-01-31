@@ -26,9 +26,13 @@ class RegisterAccViewController: UIViewController {
         guard let password = passwordTextField.text else {return}
         Auth.auth().createUser(withEmail: email, password: password) {firebaseResult, error in
             if let e = error {
+                let message = e.localizedDescription
+                self.view.makeToast("Registration Failed: " + message, duration: 5.0, position: .top)
+
                 print("Error")
             }
             else {
+
                 let emailStripped = email
                     .replacingOccurrences(of: "@", with: "")
                     .replacingOccurrences(of: ".", with: "")

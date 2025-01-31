@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import Toast
 
 class LoginViewController: UIViewController {
 
@@ -25,8 +26,11 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { firebaseResult, error in
             if let e = error {
                 print("Error")
+                let message = e.localizedDescription
+                self.view.makeToast("Login Failed: " + message, duration: 5.0, position: .top)
             }
             else {
+                self.view.makeToast("Logged in. Welcome Back!", duration: 5.0, position: .top)
                 let emailStripped = email
                     .replacingOccurrences(of: "@", with: "")
                     .replacingOccurrences(of: ".", with: "")

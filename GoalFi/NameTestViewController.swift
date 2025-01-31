@@ -26,6 +26,8 @@ class NameTestViewController: UIViewController {
         let IDstring = userID
         guard let name = nameTextField.text else {return}
         databaseRef.child("users").child(IDstring as! String).child("name").setValue(name)
+        NotificationCenter.default.post(name: NSNotification.Name("RefreshClicked"), object: "Refresh Button Clicked!")
+        self.performSegue(withIdentifier: "nametohome", sender: self)
         
     }
     @IBAction func retrieveButtonClicked(_ sender: UIButton) {

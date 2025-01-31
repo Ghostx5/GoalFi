@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B12DA3592D4C30D0000849DE /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = B12DA3582D4C30D0000849DE /* Toast */; };
 		B13D5F4D2D3DD61E00642BE3 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B13D5F4C2D3DD61E00642BE3 /* FirebaseMessaging */; };
 		B13D5F4F2D3DD61E00642BE3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B13D5F4E2D3DD61E00642BE3 /* FirebaseStorage */; };
 		B13D5F512D3DD61E00642BE3 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = B13D5F502D3DD61E00642BE3 /* FirebaseStorageCombine-Community */; };
@@ -38,6 +39,7 @@
 		B10413522D3896CB0006C517 /* GoalFiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoalFiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B12717F52D491D0700AB8693 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
 		B12B20252D41DEF40036BE18 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
+		B12DA32D2D4C28BD000849DE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
 		B14B11EC2D45803900689255 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
 		B193DD352D41E006006A229D /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 				B13D5F4F2D3DD61E00642BE3 /* FirebaseStorage in Frameworks */,
 				B13D5F512D3DD61E00642BE3 /* FirebaseStorageCombine-Community in Frameworks */,
 				B1E675712D3DD146002B26D3 /* FirebaseDatabase in Frameworks */,
+				B12DA3592D4C30D0000849DE /* Toast in Frameworks */,
 				B176E69B2D3B6C5A00BC2C21 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +149,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B12DA33C2D4C28BD000849DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B14B11FA2D45803900689255 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +196,7 @@
 				B13D5F4E2D3DD61E00642BE3 /* FirebaseStorage */,
 				B13D5F502D3DD61E00642BE3 /* FirebaseStorageCombine-Community */,
 				B13D5F522D3DD61E00642BE3 /* FirebaseVertexAI */,
+				B12DA3582D4C30D0000849DE /* Toast */,
 			);
 			productName = GoalFi;
 			productReference = B10413322D3896C50006C517 /* GoalFi.app */;
@@ -271,6 +282,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				B176E6992D3B6C5A00BC2C21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B12DA3572D4C30D0000849DE /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B10413332D3896C50006C517 /* Products */;
@@ -287,6 +299,10 @@
 				{
 					ProductGroup = B14B11FA2D45803900689255 /* Products */;
 					ProjectRef = B14B11EC2D45803900689255 /* Charts.xcodeproj */;
+				},
+				{
+					ProductGroup = B12DA33C2D4C28BD000849DE /* Products */;
+					ProjectRef = B12DA32D2D4C28BD000849DE /* Charts.xcodeproj */;
 				},
 				{
 					ProductGroup = B12718032D491D0700AB8693 /* Products */;
@@ -661,6 +677,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B12DA3572D4C30D0000849DE /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 		B176E6992D3B6C5A00BC2C21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -672,6 +696,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B12DA3582D4C30D0000849DE /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B12DA3572D4C30D0000849DE /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
 		B13D5F4C2D3DD61E00642BE3 /* FirebaseMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B176E6992D3B6C5A00BC2C21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
