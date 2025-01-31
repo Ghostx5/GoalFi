@@ -55,7 +55,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0")  // Adjust version as needed
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")  // Adjust version as needed
     implementation("androidx.activity:activity-ktx:1.7.0")  // Add this to use 'by viewModels()'
 
 }

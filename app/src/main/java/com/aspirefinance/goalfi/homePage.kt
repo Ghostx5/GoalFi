@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -15,8 +16,12 @@ import com.google.firebase.auth.FirebaseAuth
 import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
+import com.aspirefinance.goalfi.AuthViewModel
+
 
 class homePage : AppCompatActivity() {
+
+    private val authViewModel: AuthViewModel by viewModels()// ✅ Correct ViewModel initialization
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

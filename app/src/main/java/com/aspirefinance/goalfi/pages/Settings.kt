@@ -1,11 +1,18 @@
 package com.aspirefinance.goalfi.pages
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
+import com.aspirefinance.goalfi.AuthViewModel
+import com.aspirefinance.goalfi.MainActivity
 import com.aspirefinance.goalfi.R
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,6 +25,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class Settings : Fragment() {
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -37,6 +45,23 @@ class Settings : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_settings, container, false)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?){
+        val authViewModel = ViewModelProvider(requireActivity()).get(AuthViewModel::class.java) // ✅ Get ViewModel from Activity
+
+        super.onViewCreated(view, savedInstanceState)
+
+        val logoutButton = view.findViewById<Button>(R.id.logout) // Use 'view' to find the button
+
+        logoutButton.setOnClickListener {
+            authViewModel.signout()
+            val intent = Intent(activity, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
+
+    }
+
 
     companion object {
         /**
