@@ -41,16 +41,7 @@
         app:layout_constraintTop_toBottomOf="@id/h1"
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="40dp"
-        android:text="Aspire Finance is led by a team who has experienced
-similar financial challenges as our focused audience,
-giving us a deep understanding of the seriousness of
-this situation. This personal experience enables us to
-provide tailored financial guidance that suits the
-unique struggles you face. By choosing Aspire Finance,
-you're working with a team that truly understands your
-financial journey and is committed to helping you
-navigate it with confidence. Add like one more sentence
-here"
+        android:text=""
         android:textColor="@color/white"
         android:autoSizeTextType="uniform"
         android:textStyle="normal"
