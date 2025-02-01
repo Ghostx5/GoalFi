@@ -22,7 +22,7 @@
             android:label="Log In" />
         <activity
             android:name=".pages.homePage"
-            android:exported="false"
+            android:exported="true"
             android:label="Home Page"/><!-- Main Activity (Launcher) -->
         <activity
             android:name=".MainActivity"
