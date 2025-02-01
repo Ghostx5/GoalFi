@@ -1,12 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".pages.Learn">
+    tools:context=".pages.Learn"
+    android:background="@color/black">
 
     <!-- TODO: Update blank fragment layout -->
 
 
-</FrameLayout>
+    <Button
+        android:id="@+id/curriculum_redirect"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button"
+        android:text="Curriculum"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@null"/>
+
+    <Button
+        android:id="@+id/chatbot_redirect"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button"
+        android:text="ChatBot"
+        app:layout_constraintTop_toBottomOf="@id/curriculum_redirect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@null"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

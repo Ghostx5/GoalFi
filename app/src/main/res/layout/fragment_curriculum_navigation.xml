@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".pages.curriculum.curriculum_navigation"
+        android:paddingBottom="100dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="50dp"
+            android:text="Curriculum"
+            android:textColor="@color/white"
+            android:autoSizeTextType="uniform"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/module_1"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                android:text="Module 1: Introduction to Financial Literacy"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@null"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <Button
+                android:id="@+id/module_2"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/button"
+                android:text="Module 2: Income and Employment"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@null"
+                app:layout_constraintTop_toBottomOf="@id/module_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <Button
+            android:id="@+id/module_3"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/button"
+            android:text="Module 3:  Budgeting and Money Management"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null"
+            app:layout_constraintTop_toBottomOf="@id/module_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/module_4"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/button"
+            android:text="Module 4:  Saving and Investing"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null"
+            app:layout_constraintTop_toBottomOf="@id/module_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/module_5"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/button"
+            android:text="Module 5: Credit and Debt Management"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null"
+            app:layout_constraintTop_toBottomOf="@id/module_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/module_6"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/button"
+            android:text="Module 6: Financial Planning and Goal Setting"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null"
+            app:layout_constraintTop_toBottomOf="@id/module_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/module_7"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/button"
+            android:text="Module 7: Consumer Skills and Smart Spending"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null"
+            app:layout_constraintTop_toBottomOf="@id/module_6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/module_8"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/button"
+            android:text="Module 8: Understanding Financial Products and Services"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null"
+            app:layout_constraintTop_toBottomOf="@id/module_7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/module_9"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/button"
+            android:text="Module 9: Taxes and Retirement Planning"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null"
+            app:layout_constraintTop_toBottomOf="@id/module_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</android.widget.ScrollView>
