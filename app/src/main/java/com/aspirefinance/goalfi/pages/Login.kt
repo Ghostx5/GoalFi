@@ -18,6 +18,8 @@ class login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)  // Set the layout for the sign-up activity
 
+        supportActionBar?.title = ""
+
         super.onResume()
         if (intent.getBooleanExtra("EXIT", false)) {
             finish()

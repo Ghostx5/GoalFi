@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_startpage)
 
+        supportActionBar?.title = "Allah hu Ahkbar"
+
         authViewModel.authState.observe(this) { state ->
             when (state) {
                 is AuthState.Authenticated -> {

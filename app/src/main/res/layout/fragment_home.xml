@@ -5,40 +5,57 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".pages.Home"
-    android:background="@color/green">
+    android:background="@color/black">
 
     <!-- TODO: Update blank fragment layout -->
+
+
     <TextView
-        android:id="@+id/homeText"
+        android:id="@+id/loginwlcmsg"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="50dp"
-        android:text="Home"
+        android:layout_marginTop="35dp"
+        android:text=""
         android:textColor="@color/white"
         android:autoSizeTextType="uniform"
         android:textStyle="bold"
         android:textAlignment="center"/>
 
-    <View
-        android:id="@+id/bar"
+    <TextView
+        android:id="@+id/h1"
         android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginHorizontal="50dp"
-        android:background="@android:color/black"
-        app:layout_constraintTop_toBottomOf="@id/homeText"/>
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/loginwlcmsg"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="40dp"
+        android:text="Why Choose Aspire"
+        android:textColor="@color/white"
+        android:autoSizeTextType="uniform"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
 
     <TextView
-        android:id="@+id/loginwlcmsg"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        app:layout_constraintTop_toBottomOf="@id/bar"
-        android:layout_marginTop="10dp"
-        android:text="Welcome User"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/h1"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="40dp"
+        android:text="Aspire Finance is led by a team who has experienced
+similar financial challenges as our focused audience,
+giving us a deep understanding of the seriousness of
+this situation. This personal experience enables us to
+provide tailored financial guidance that suits the
+unique struggles you face. By choosing Aspire Finance,
+you're working with a team that truly understands your
+financial journey and is committed to helping you
+navigate it with confidence. Add like one more sentence
+here"
         android:textColor="@color/white"
         android:autoSizeTextType="uniform"
         android:textStyle="normal"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

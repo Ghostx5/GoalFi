@@ -29,6 +29,9 @@ class homePage : AppCompatActivity() {
         FirebaseDatabase.getInstance().setPersistenceEnabled(true)
         setContentView(R.layout.activity_home_page)
 
+        supportActionBar?.title = ""
+
+
         bottomnav = findViewById(R.id.navbar) // Initialize here
         replaceFragment(Home())
 

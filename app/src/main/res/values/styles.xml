@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="SplashTheme" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:windowBackground">@drawable/logo</item> <!-- Use your drawable here -->
+    <style name="title_3" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Set the color of the ActionBar (Title bar) -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <!-- Accent color -->
+        <item name="colorAccent">@color/lightgreen</item>
+    </style>
+    <style name="title_2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Set the color of the ActionBar (Title bar) -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
     </style>
 </resources>

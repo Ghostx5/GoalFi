@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import com.aspirefinance.goalfi.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -35,6 +36,9 @@ class Budget : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        activity?.let {
+            (it as AppCompatActivity).supportActionBar?.title = "Budget"
+        }
         return inflater.inflate(R.layout.fragment_budget, container, false)
     }
 

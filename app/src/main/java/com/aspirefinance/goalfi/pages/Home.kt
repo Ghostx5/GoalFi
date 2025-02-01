@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.aspirefinance.goalfi.R
 import com.google.firebase.auth.FirebaseAuth
 
@@ -27,6 +28,9 @@ class Home : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        activity?.let {
+            (it as AppCompatActivity).supportActionBar?.title = "Home"
+        }
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
