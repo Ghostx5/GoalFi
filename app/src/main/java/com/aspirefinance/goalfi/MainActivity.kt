@@ -35,10 +35,9 @@ class MainActivity : AppCompatActivity() {
                 is AuthState.Authenticated -> {
                     val intent = Intent(this, homePage::class.java)
                     startActivity(intent)
-                    finish() // Close MainActivity so users don't go back to it
+                    finish()
                 }
                 is AuthState.Unauthenticated -> {
-                    // Stay on start page (login/signup)
                     val loginBTN: Button = findViewById(R.id.login_redirect)
                     loginBTN.setOnClickListener {
                         val intent = Intent(this, login::class.java)
@@ -46,16 +45,13 @@ class MainActivity : AppCompatActivity() {
                     }
                     val signupBTN: Button = findViewById(R.id.signup_redirect)
                     signupBTN.setOnClickListener {
-                        val intent = Intent(this, sign_up::class.java)  // Ensure the correct class name
+                        val intent = Intent(this, sign_up::class.java)
                         startActivity(intent)
                     }
                 }
-
                 is AuthState.Loading -> {
-                    // Optional: Show a loading indicator
                     Toast.makeText(this, "Loading", Toast.LENGTH_SHORT).show()
                 }
-
                 is AuthState.Error -> {
                     Toast.makeText(this, "Error + ${state.message}", Toast.LENGTH_SHORT).show()
                 }
@@ -66,10 +62,8 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-
         }
     }
-
 }
 
 
