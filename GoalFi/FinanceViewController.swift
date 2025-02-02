@@ -26,7 +26,7 @@ class FinanceViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateValues(_:)), name: NSNotification.Name("RefreshClicked"), object:nil)
         
         let IDstring = userID
-        databaseRef.child("users").child(IDstring as! String).child("Finance").child("Monthly Salary").observeSingleEvent(of: .value) {snapshot,placehold in if let money = snapshot.value as? String{
+        databaseRef.child("users").child(IDstring as! String).child("Finance").child("MonthlySalary").observeSingleEvent(of: .value) {snapshot,placehold in if let money = snapshot.value as? String{
             self.summaryLabel.text = "You make: $" + money
             let funny = Double(money)
             let needs = String((funny ?? 1000) * 0.50)
@@ -63,7 +63,7 @@ class FinanceViewController: UIViewController {
     @objc func updateValues(_ notification: Notification){
         let IDstring = userID
         self.view.makeToast("Finances Updated!", duration: 3.0, position: .top)
-        databaseRef.child("users").child(IDstring as! String).child("Finance").child("Monthly Salary").observeSingleEvent(of: .value) {snapshot,placehold in if let money = snapshot.value as? String{
+        databaseRef.child("users").child(IDstring as! String).child("Finance").child("MonthlySalary").observeSingleEvent(of: .value) {snapshot,placehold in if let money = snapshot.value as? String{
             self.summaryLabel.text = "You make: $" + money
             let funny = Double(money)
             let needs = String((funny ?? 1000) * 0.50)
