@@ -10,14 +10,24 @@ import Firebase
 import FirebaseAuth
 import Toast
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        let tapGesture = UITapGestureRecognizer(target:self, action: #selector(dismissKeyboard))
 
         // Do any additional setup after loading the view.
+    }
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
     }
     @IBAction func loginClicked(_ sender: UIButton) {
         guard let email = emailTextField.text else {return}
