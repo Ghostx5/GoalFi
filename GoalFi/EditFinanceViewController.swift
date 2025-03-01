@@ -9,7 +9,7 @@ import UIKit
 import FirebaseDatabase
 
 
-class EditFinanceViewController: UIViewController {
+class EditFinanceViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var zipCodeField: UITextField!
     @IBOutlet weak var monthlySalaryField: UITextField!
@@ -18,10 +18,15 @@ class EditFinanceViewController: UIViewController {
     let userID = UserDefaults.standard.object(forKey: "uniqueDeviceID")
     override func viewDidLoad() {
         super.viewDidLoad()
+        zipCodeField.delegate = self
+        monthlySalaryField.delegate = self
 
         // Do any additional setup after loading the view.
     }
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
+    }
     @IBAction func storeButtonClicked(_ sender: UIButton) {
         guard let financeValue = monthlySalaryField.text else {return}
         guard let zipCode = zipCodeField.text else {return}
