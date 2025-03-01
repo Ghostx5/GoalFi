@@ -17,8 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(updateValues(_:)), name: NSNotification.Name("RefreshClicked"), object:nil)
         // Do any additional setup after loading the view.
-        let IDstring = userID
-        databaseRef.child("users").child(IDstring as! String).child("name").observeSingleEvent(of: .value) {snapshot in
+        guard let IDstring = userID as? String else{return}
+        databaseRef.child("users").child(IDstring).child("name").observeSingleEvent(of: .value) {snapshot in
             if let name = snapshot.value as? String{
                 self.welcomeLabel.text = "Welcome, \(name)!"
             }
